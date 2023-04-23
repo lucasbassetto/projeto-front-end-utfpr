@@ -1,0 +1,139 @@
+html,body{
+    border: 0;
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+}
+
+main {
+    display: flex;
+    height: 100vh;
+    background-image: url(https://media.discordapp.net/attachments/1097975955332530196/1097979089685577738/bgLogin.jpg?width=1005&height=670);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.left{
+    background-color: rgba(33, 33, 33, 0.6);
+    width: 70%;
+    display: flex;
+    justify-content: center;
+}
+
+.left h1 {
+    margin-top: 25%;
+    color: #FFF;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 1.2;
+    max-width: 700px;
+}
+
+.right {
+    background-color: #FFF;
+    width: 32%;
+    display: flex;
+    flex-direction: column;
+}
+
+.container{
+    height: 100%;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 14px;
+}
+form{
+    width: 100%;
+}
+
+.inp{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.inp input{
+    margin-top: 10px;
+    margin-bottom: 25px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+
+}
+
+.inp-check{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.inp-check label{
+    color: #717171;
+}
+
+
+.brand-img {
+    vertical-align: middle;
+    width: 280px;
+}
+
+.colegio-londrinense {
+    font-size: 24px;
+    text-align: center;
+    font-weight: lighter;
+    margin: 24px 0 11px;
+}
+
+.text-center {
+    text-align: center;
+    font-size: 12px;
+    margin-top: 0;
+    color: #616161;
+}
+
+a {
+    color: #616161;
+    text-decoration: none;
+}
+
+button{
+    margin-top: 80px;
+    color: #FFF;
+    background-color: #616161;
+    border-color: #616161;
+    box-shadow: none;
+    border-radius: 5px;
+    width: 100%;
+    height: 35px;
+}
+a{
+    margin-top: 10px;
+}
+
+footer{
+    margin-top: 300px;
+    font-size: 12px;
+    color: #424242;
+}
+
+p {
+    text-align: center;
+
+}
+
+
+@media (max-width: 991.98px) { 
+    h1 {
+        font-size: 4em;
+    }
+    .right {
+        width: 100%;
+    }
+
+    .left {
+        width: 0%;
+    }
+ }
+

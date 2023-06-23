@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,7 +7,6 @@
     <title>Document</title>
     <link rel="stylesheet" href="./css/style.css">
 </head>
-
 <body>
     <main>
         <section class="left">
@@ -50,7 +48,15 @@
                     <p>Desenvolvido por Tecnologia da Informação - IFL </p> 
                     <p> © 1972-2023. Todos os direitos reservados.</p>
                 </footer>
+                
+                <div class="box-adicionar-post">
+                    <p>Adicionar novo Post</p>
+                </div>
 
+                <div class="container-post">
+                    <ul class="row-post"></ul>
+                </div>
+        
                 <div class="dialog-novo-post">
                     <div class="dialog-header">
                         <p>Digite nos campos abaixo o conteúdo do novo post</p>
@@ -58,13 +64,13 @@
                     </div>
                     <div class="dialog-body">
                         <p>Título:</p>
-                        <input type="text" name="input-text" class="input-titulo">
+                        <input type="text" class="input-titulo">
                         <p>Descrição:</p>
-                        <input type="text" name="input-descricao" class="input-descricao">
+                        <input type="text" class="input-descricao">
                         <p>Link da Imagem:</p>
-                        <input type="text" name="input-link" class="input-link">
-                        <input type="button" value="Adicionar" class="btn-dialog-adicionar">
-                        <p class="adicionar"></p>
+                        <input type="text" class="input-link">
+                        <button class="btn-dialog-adicionar">Adicionar</button>
+                        <p class="adicionar-postagem"></p>
                     </div>
                 </div>
 
@@ -75,20 +81,16 @@
                     </div>
                     <div class="dialog-body">
                         <p>Título:</p>
-                        <input type="text" name="input-text" class="input-titulo-editar">
+                        <input type="text" class="input-titulo-editar">
                         <p>Descrição:</p>
-                        <input type="text" name="input-descricao" class="input-descricao-editar">
+                        <input type="text" class="input-descricao-editar">
                         <p>Link Imagem:</p>
-                        <input type="text" name="input-link"  class="input-link-editar">
+                        <input type="text" class="input-link-editar">
                         <input type="button" value="Editar" class="btn-dialog-editar">
                         <p class="editar"></p>
                     </div>
-                </div>
+                </div> 
 
-                <div class="box-adicionar-post">
-                    <p>Adicionar novo Post</p>
-                </div>
-                
             </div>
             <script src="index.js"></script>
         </section>

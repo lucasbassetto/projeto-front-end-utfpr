@@ -188,12 +188,55 @@ footer {
 
 .btn-dialog-adicionar {
     margin-top: 10px;
+    padding: 10px;
+    font-size: 20px;
+    text-decoration: none;
+    box-shadow: none;
+    border-color: transparent;
 }
 
 .btn-dialog-adicionar:hover {
     background-color: #b86800;
     color: white;
 }
+
+
+.row-post div {
+    width: 350px;
+    margin-bottom: 30px;
+}
+
+.row-post h1 {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.row-post p {
+    font-size: 15px;
+    font-weight: normal;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+.row-post img {
+    width: 300px;
+    height: 150px;
+}
+
+.row-post button {
+    font-size: 13px;
+    margin-right: 5px;
+    padding: 5px;
+    border-radius:4px;
+    background-color: #b86800;
+    color: white;
+    border-color: transparent;
+}
+
+.row-post button:hover{
+    background-color: #d89a48;
+}
+
 
 @media (max-width: 991.98px) { 
     h1 {
@@ -207,3 +250,9 @@ footer {
         width: 0%;
     }
  }
+
+ /* .row-post {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    margin-top: 100px;
+} */

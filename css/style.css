@@ -1,4 +1,4 @@
-html,body{
+html,body {
     border: 0;
     margin: 0;
     padding: 0;
@@ -13,7 +13,7 @@ main {
     background-size: cover;
 }
 
-.left{
+.left {
     background-color: rgba(33, 33, 33, 0.6);
     width: 70%;
     display: flex;
@@ -36,7 +36,7 @@ main {
     flex-direction: column;
 }
 
-.container{
+.container {
     height: 100%;
     padding: 50px;
     display: flex;
@@ -44,7 +44,7 @@ main {
     align-items: center;
     font-size: 14px;
 }
-form{
+form {
     width: 100%;
 }
 
@@ -200,6 +200,11 @@ footer {
     color: white;
 }
 
+.row-post {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    margin-top: 100px;
+} 
 
 .row-post div {
     width: 350px;
@@ -250,9 +255,3 @@ footer {
         width: 0%;
     }
  }
-
- /* .row-post {
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-    margin-top: 100px;
-} */

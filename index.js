@@ -1,16 +1,21 @@
-// ------------------- ADICIONAR POST -----------------------
+// --------------------------------------- ADICIONAR POST ---------------------------------------
 const dialogNovoPost = document.querySelector('.dialog-novo-post');
 const btnAdicionar = document.querySelector('.btn-dialog-adicionar');
 const inputTitulo = document.querySelector(".input-titulo");
 const inputDescricao = document.querySelector(".input-descricao");
 const inputImagem = document.querySelector(".input-link");
 
-// ------------------- EDITAR POST -----------------------
+// --------------------------------------- EDITAR POST ---------------------------------------
 const dialogEditarPost = document.querySelector('.dialog-editar-post')
 const botaoEditar = document.querySelector('.btn-dialog-editar');
 const inputTituloEditar = document.querySelector('.tituloEditar');
 const inputDescricaoEditar = document.querySelector('.descricaoEditar');
 const inputLinkEditar = document.querySelector('.linkEditar');
+
+// --------------------------------------- PESQUISAR POST ---------------------------------------
+const dialogBuscar = document.querySelector('.buscar');
+const inputBusca = document.querySelector('.input-buscar');
+
 
 //  Box Adicionar Novo Post - Neste comando, ao clicar no botão, abre o Dialog para inserir um Post.
 const boxNovoPost = document.querySelector('.box-adicionar-post');
@@ -34,8 +39,21 @@ btnFecharDialogEditar.addEventListener('click', function () {
     dialogEditarPost.className = 'dialog-editar-post';
 });
 
-var postagem = [];
+// Botão Pesquisa - Neste comando, ao clicar no botão, a barra de pesquisa irá aparecer
+const pesquisar = document.querySelector('.pesquisar')
 
+pesquisar.addEventListener('click', function () {
+    dialogBuscar.className = 'buscar-show'
+})
+
+// Botão Cancelar - Neste comando, ao clicar no botão, a barra de pesquisa irá se fechar
+const cancelarBuscar = document.querySelector('.cancelar-buscar')
+
+cancelarBuscar.addEventListener('click', function () {
+    dialogBuscar.className = 'buscar'
+})
+
+var postagem = [];
 
 if (localStorage.posts) {
     postagem = JSON.parse(localStorage.posts)
@@ -153,6 +171,10 @@ class Implementacao {
             });
         });
     }
+
+    pesquisar() {
+
+    }
 }
 
 var implementacao = new Implementacao()
@@ -185,8 +207,8 @@ function showContent() {
 
         post.appendChild(idPost);
         post.appendChild(tituloPost);
-        post.appendChild(descricaoPost);
         post.appendChild(imagemPost);
+        post.appendChild(descricaoPost);
         post.appendChild(btnEditar);
         post.appendChild(btnExcluir);
         lista.appendChild(post)

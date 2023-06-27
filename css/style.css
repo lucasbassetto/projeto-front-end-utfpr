@@ -289,13 +289,46 @@ footer {
 
 .aviso {
     font-size: 15px;
+}
 
+.buscar {
+    display: none;
+}
+
+.buscar-show {
+    position: absolute;
+    top: 60px;
+    right: 10px; 
+}
+
+.buscar-show input {
+    margin-top: 5px;
+    width: 150px; 
+    font-size: 15px;
+    padding: 10px;
+    border: solid #d89a48 1px;
+    height: 1px;
+}
+
+.buscar-show button {
+    font-size: 12px;
+    background-color: #b86800;
+    border-color: transparent;
+    padding: 2px;
+    border-radius: 5px; 
+    color: white;
+}
+
+.buscar-show button:hover {
+    background-color: #d89a48;
 }
 
 @media (max-width: 991.98px) { 
+
     h1 {
         font-size: 4em;
     }
+    
     .right {
         width: 100%;
     }

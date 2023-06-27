@@ -112,7 +112,7 @@ class Implementacao {
         i++;
         localStorage.setItem('id', i);
 
-        location.reload();
+    
     }
 
     editPost() {

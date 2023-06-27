@@ -4,6 +4,7 @@ const inputTitulo = document.querySelector(".input-titulo");
 const inputDescricao = document.querySelector(".input-descricao");
 const inputImagem = document.querySelector(".input-link");
 
+
 // ------------------- EDITAR POST -----------------------
 const dialogEditarPost = document.querySelector('.dialog-editar-post')
 const botaoEditar = document.querySelector('.btn-dialog-editar');
@@ -93,18 +94,20 @@ class Implementacao {
         idPost.innerHTML = adicionarPublicacao.id;
         tituloPost.innerHTML = adicionarPublicacao.titulo;
         descricaoPost.innerHTML = adicionarPublicacao.descricao;
+        imagemPost.src = adicionarPublicacao.link;
         btnEditar.innerHTML = 'Editar';
         btnEditar.className = 'btn-editar-post';
         btnExcluir.innerHTML = 'Excluir';
         btnExcluir.className = 'btn-excluir-post';
-        imagemPost.src = adicionarPublicacao.link;
-    
+     
+        
         post.appendChild(idPost);
         post.appendChild(tituloPost);
-        post.appendChild(descricaoPost);
         post.appendChild(imagemPost);
+        post.appendChild(descricaoPost);
         post.appendChild(btnEditar);
         post.appendChild(btnExcluir);
+
         lista.appendChild(post);
     
         // Implementando a soma do ID nos posts
@@ -112,7 +115,7 @@ class Implementacao {
         i++;
         localStorage.setItem('id', i);
 
-    
+        location.reload();
     }
 
     editPost() {

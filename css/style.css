@@ -226,15 +226,14 @@ footer {
 }
 
 .row-post {
-    max-width: 800px;
     display: grid;
-    grid-template-columns: auto auto auto auto;
-    margin-top: 100px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin-top: 30px;
 } 
 
 .row-post div {
-    width: 350px;
-    margin-bottom: 30px;
+    width: 285px;
+    margin-bottom: 25px;
 }
 
 .row-post h1 {

@@ -148,7 +148,7 @@ footer {
     left: 90%;
     background-color: #b86800;
     padding: 2px;
-    border-radius: 12px; 
+    border-radius: 5px; 
     color: white;
     display: flex;
 }
@@ -303,4 +303,21 @@ footer {
     .left {
         width: 0%;
     }
+
+    .box-adicionar-post {
+       left: 150px
+    }
+
+    .dialog-novo-post-show {
+        width: 300px;
+    }
+
+    .dialog-editar-post-show {
+        width: 300px;
+    }
+
+    .row-conteudo{
+        grid-template-columns: 1fr;
+    }
+
  }

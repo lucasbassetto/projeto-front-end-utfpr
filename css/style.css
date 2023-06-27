@@ -154,6 +154,16 @@ footer {
     color: white;
 }
 
+.dialog-editar-post-show {
+    width: 650px;
+    position: fixed;
+    margin-top: 200px;
+    left: 30%;
+    background-color: #807d7d;
+    border-radius: 10px;
+    color: white;
+}
+
 .dialog-header {
     margin: 10px; 
     font-size: 28px;
@@ -200,6 +210,20 @@ footer {
     color: white;
 }
 
+.btn-dialog-editar {
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 20px;
+    text-decoration: none;
+    box-shadow: none;
+    border-color: transparent;
+}
+
+.btn-dialog-editar:hover {
+    background-color: #b86800;
+    color: white;
+}
+
 .row-post {
     display: grid;
     grid-template-columns: auto auto auto auto;
@@ -242,6 +266,10 @@ footer {
     background-color: #d89a48;
 }
 
+.aviso {
+    font-size: 15px;
+
+}
 
 @media (max-width: 991.98px) { 
     h1 {

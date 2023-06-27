@@ -119,6 +119,21 @@ footer {
     text-align: center;
 }
 
+.button-search ul {
+    list-style: none;
+}
+
+.button-search li{
+    margin-top: -20px;
+    margin-left: 400px;
+    font-size: 13px;
+}
+
+.icone-pesquisar {
+    width: 15px;
+    margin-left: -20px;
+    margin-top: 5px;
+ }
 
 .box-adicionar-post {
     margin-top: 830px;

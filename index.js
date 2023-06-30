@@ -92,10 +92,6 @@ class Implementacao {
         let lista = document.querySelector('.row-post');
         let adicionarPublicacao = new novaPublicacao(localStorage.getItem('id'), titulo, descricao, link);
 
-        if(!localStorage.id) {
-            localStorage.id = 0; 
-        }
-
         if (localStorage.posts) {
             postagem = JSON.parse(localStorage.posts);
         }
@@ -135,7 +131,7 @@ class Implementacao {
         // Implementando a soma do ID nos posts
         let i = parseInt(localStorage.getItem('id'));
         i++;
-        localStorage.setItem('id', i);
+        localStorage.setItem('id', i.toString());
         location.reload();
     }
 

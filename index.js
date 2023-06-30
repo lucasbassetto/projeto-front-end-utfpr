@@ -54,6 +54,7 @@ cancelarBuscar.addEventListener('click', function () {
 
 var postagem = [];
 
+// Declaração da função construtora newPost, que define a estrutura de um objeto de postagem.
 function newPost(id, titulo, descricao, link) {
     this.id = id;
     this.titulo = titulo;
@@ -61,10 +62,14 @@ function newPost(id, titulo, descricao, link) {
     this.link = link;
 }
 
+// Verifica se a chave id existe no localStorage. Se não existir, cria a chave id e atribui o valor 0.
 if(!localStorage.id) {
     localStorage.id = 0; 
 }
 
+// Verifica se existe algum valor armazenado na propriedade "posts" do objeto localStorage. Se existir, significa que já existem posts armazenados, e os dados são 
+// recuperados usando JSON.parse(localStorage.posts). Essa linha converte os dados armazenados em formato JSON de volta para um array de objetos JavaScript e atribui a postagem.
+// Em seguida, chama a função showContent() para exibir os posts na página.
 if (localStorage.posts) {
     postagem = JSON.parse(localStorage.posts)
     showContent();
@@ -92,13 +97,11 @@ class Implementacao {
         let lista = document.querySelector('.row-post');
         let adicionarPublicacao = new newPost(localStorage.getItem('id'), titulo, descricao, link);
 
-        if (localStorage.posts) {
-            postagem = JSON.parse(localStorage.posts);
-        }
-
+        // A publicação recém-criada é adicionada ao array postagem.
         postagem.push(adicionarPublicacao);
 
-        localStorage.posts = JSON.stringify(postagem);
+        // O array postagem é convertido para uma string JSON usando JSON.stringify(postagem) e, em seguida, armazenado novamente no localStorage com a chave 'posts'
+        localStorage.posts = JSON.stringify(postagem); 
 
         let post = document.createElement('div');
         let idPost = document.createElement('p');
@@ -201,7 +204,6 @@ document.addEventListener('DOMContentLoaded', implementacao.deletePost);
 const dialogBuscar = document.querySelector('.buscar');
 const inputBusca = document.querySelector('.input-buscar');
 const publicacao = document.querySelectorAll('.publicacao')
-
 
 inputBusca.addEventListener('input', implementacao.search)
 

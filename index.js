@@ -12,11 +12,6 @@ const inputTituloEditar = document.querySelector('.tituloEditar');
 const inputDescricaoEditar = document.querySelector('.descricaoEditar');
 const inputLinkEditar = document.querySelector('.linkEditar');
 
-// --------------------------------------- PESQUISAR POST ---------------------------------------
-const dialogBuscar = document.querySelector('.buscar');
-const inputBusca = document.querySelector('.input-buscar');
-
-
 //  Box Adicionar Novo Post - Neste comando, ao clicar no botão, abre o Dialog para inserir um Post.
 const boxNovoPost = document.querySelector('.box-adicionar-post');
 
@@ -51,6 +46,10 @@ const cancelarBuscar = document.querySelector('.cancelar-buscar')
 
 cancelarBuscar.addEventListener('click', function () {
     dialogBuscar.className = 'buscar'
+    inputBusca.value = ""; 
+    for(let post of publicacao){
+        post.style.display = "block"; 
+    }
 })
 
 var postagem = [];
@@ -172,16 +171,37 @@ class Implementacao {
         });
     }
 
-    pesquisar() {
-
+    search() {
+        const inputBusca = document.querySelector('.input-buscar');
+        const publicacoes = document.querySelectorAll('.publicacao');
+    
+        const termoBusca = inputBusca.value.toLowerCase().trim();
+    
+        for (let publicacao of publicacoes) {
+            const titulo = publicacao.querySelector('h1').textContent.toLowerCase();
+    
+            if (titulo.includes(termoBusca)) {
+                publicacao.style.display = 'block';
+            } else {
+                publicacao.style.display = 'none';
+            }
+        }
     }
 }
 
-var implementacao = new Implementacao()
+var implementacao = new Implementacao();
 
 btnAdicionar.addEventListener('click', implementacao.addPost)
 document.addEventListener('DOMContentLoaded', implementacao.editPost);
 document.addEventListener('DOMContentLoaded', implementacao.deletePost);
+
+// --------------------------------------- PESQUISAR POST ---------------------------------------
+const dialogBuscar = document.querySelector('.buscar');
+const inputBusca = document.querySelector('.input-buscar');
+const publicacao = document.querySelectorAll('.publicacao')
+
+
+inputBusca.addEventListener('input', implementacao.search)
 
 function showContent() {
     for (let i = 0; i < postagem.length; i++) {

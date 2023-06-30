@@ -299,6 +299,7 @@ footer {
     position: absolute;
     top: 60px;
     right: 10px; 
+    position: fixed;
 }
 
 .buscar-show input {

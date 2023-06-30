@@ -54,11 +54,6 @@ cancelarBuscar.addEventListener('click', function () {
 
 var postagem = [];
 
-if (localStorage.posts) {
-    postagem = JSON.parse(localStorage.posts)
-    showContent();
-}
-
 function novaPublicacao(id, titulo, descricao, link) {
     this.id = id;
     this.titulo = titulo;
@@ -66,6 +61,14 @@ function novaPublicacao(id, titulo, descricao, link) {
     this.link = link;
 }
 
+if(!localStorage.id) {
+    localStorage.id = 0; 
+}
+
+if (localStorage.posts) {
+    postagem = JSON.parse(localStorage.posts)
+    showContent();
+}
 
 class Implementacao {
 

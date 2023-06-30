@@ -168,9 +168,9 @@ class Implementacao {
         botoes.forEach((botao, indice) => {
             botao.addEventListener('click', () => {
                 const id = postagem[indice].id;
-                postagem = postagem.filter((p) => p.id !== id);
+                postagem = postagem.filter((p) => p.id !== id); // comparando o ID de cada postagem com o ID a ser excluido. Se o ID não for igual, a postagem será mantida na nova lista, caso contrário, será removida.
                 localStorage.posts = JSON.stringify(postagem);
-                document.querySelector('.row-post').removeChild(botao.parentElement);
+                document.querySelector('.row-post').removeChild(botao.parentElement); // removendo elemento pai do botão (div 'publicacao')
                 location.reload();
             });
         });

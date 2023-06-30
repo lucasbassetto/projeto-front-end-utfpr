@@ -129,7 +129,7 @@ class Implementacao {
         lista.appendChild(post);
 
         // Implementando a soma do ID nos posts
-        let i = localStorage.getItem('id');
+        let i = parseInt(localStorage.getItem('id'));
         i++;
         localStorage.setItem('id', i);
         location.reload();

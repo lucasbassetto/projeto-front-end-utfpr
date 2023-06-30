@@ -175,12 +175,12 @@ class Implementacao {
         const inputBusca = document.querySelector('.input-buscar');
         const publicacoes = document.querySelectorAll('.publicacao');
     
-        const termoBusca = inputBusca.value.toLowerCase().trim();
+        const textoBusca = inputBusca.value.toLowerCase().trim();
     
         for (let publicacao of publicacoes) {
             const titulo = publicacao.querySelector('h1').textContent.toLowerCase();
     
-            if (titulo.includes(termoBusca)) {
+            if (titulo.includes(textoBusca)) {
                 publicacao.style.display = 'block';
             } else {
                 publicacao.style.display = 'none';

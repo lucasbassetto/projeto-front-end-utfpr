@@ -236,3 +236,7 @@ function showContent() {
         lista.appendChild(post)
     }
 }
+
+
+/* https://validator.w3.org/nu/?doc=https%3A%2F%2Flucasbassetto.github.io%2Fprojeto-front-end-utfpr%2F
+https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Flucasbassetto.github.io%2Fprojeto-front-end-utfpr%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=pt-BR */

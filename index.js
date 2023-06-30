@@ -61,9 +61,9 @@ function newPost(id, titulo, descricao, link) {
     this.link = link;
 }
 
-if(!localStorage.id) {
-    localStorage.id = 0; 
-}
+if (!localStorage.id || isNaN(parseInt(localStorage.id))) {
+    localStorage.id = 0; // Define um valor padrão caso o ID não seja válido
+  }
 
 if (localStorage.posts) {
     postagem = JSON.parse(localStorage.posts)

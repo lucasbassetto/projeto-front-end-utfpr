@@ -54,7 +54,7 @@ cancelarBuscar.addEventListener('click', function () {
 
 var postagem = [];
 
-function novaPublicacao(id, titulo, descricao, link) {
+function newPost(id, titulo, descricao, link) {
     this.id = id;
     this.titulo = titulo;
     this.descricao = descricao;
@@ -90,7 +90,7 @@ class Implementacao {
         }
 
         let lista = document.querySelector('.row-post');
-        let adicionarPublicacao = new novaPublicacao(localStorage.getItem('id'), titulo, descricao, link);
+        let adicionarPublicacao = new newPost(localStorage.getItem('id'), titulo, descricao, link);
 
         if (localStorage.posts) {
             postagem = JSON.parse(localStorage.posts);
